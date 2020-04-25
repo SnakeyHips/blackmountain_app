@@ -1,57 +1,50 @@
 import React from "react";
-import { createStyles, Theme, makeStyles } from "@material-ui/core/styles";
+import { Theme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Grid from "@material-ui/core/Grid";
-import ExpansionPanel from "@material-ui/core/ExpansionPanel";
-import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
-import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
+import Card from "@material-ui/core/Card";
+import CardMedia from "@material-ui/core/CardMedia";
+import Button from "@material-ui/core/Button";
 import Divider from "@material-ui/core/Divider";
 import Avatar from "@material-ui/core/Avatar";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import EmailIcon from "@material-ui/icons/Email";
 import PhoneIcon from "@material-ui/icons/Phone";
-import LinkButton from "../Layout/LinkButton";
+import { Product } from "../../models/product";
 import homeImage from "../../assets/home.jpg";
-import mainImg from "../../assets/products.jpg";
-import avatar from "../../assets/cbd.jpg";
+import mainImage from "../../assets/main.jpg";
+import avatar from "../../assets/kim.jpg";
+import cbdImage from "../../assets/cbd.jpg";
+import balmImage from "../../assets/balm.jpg";
 import useStylesBase from "../../styles/styles-base";
 import clsx from "clsx";
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    avatar: {
-      height: 200,
-      width: 200,
-      margin: "auto",
-      marginBottom: theme.spacing(4)
-    },
-    button: {
-      marginTop: theme.spacing(2),
-      marginBottom: -theme.spacing(1)
-    },
-    divider: {
-      margin: theme.spacing(4)
-    },
-    expansionSummary: {
-      fontWeight: 700,
-      margin: 0
-    },
-    fillHeight: {
-      height: "100%"
-    }
-  })
-);
-
 export default function Home() {
-  const classes = useStyles();
   const classesBase = useStylesBase();
   const smAndDown = useMediaQuery((theme: Theme) => theme.breakpoints.down("sm"));
-  const aboutImg = <img className={classesBase.homeLogo} src={mainImg} alt="" />;
+  const aboutImg = <img className={classesBase.homeLogo} src={mainImage} alt="main" />;
+
+  const cbd: Product = {
+    name: "CBD OIL",
+    image: cbdImage,
+    info:
+      "Cannabidiol is a popular natural remedy used for many common ailments.  Better known as CBD, it is one of over 100 chemical compounds known as cannabinoids found in the cannabis or marijuana plant, Cannabis sativa.",
+    price: "£20"
+  };
+
+  const balm: Product = {
+    name: "SERENITY",
+    image: balmImage,
+    info:
+      "A natural trans dermal cream which is applied to the skin. You can experience health benefits such as pain relief, inflammation relief, rheumatism pain and more.",
+    price: "£40"
+  };
+
+  const products: Product[] = [cbd, balm];
 
   return (
     <div>
@@ -61,8 +54,8 @@ export default function Home() {
           <span className={classesBase.headerText}>Black Mountains CBD</span>
         </Grid>
         <Grid container justify="center" className={classesBase.contentContainer}>
-          <Grid item md={8} sm={10} xs={12} className={classesBase.mb3}>
-            <h4 className={classesBase.contentTitle}>Who I am</h4>
+          <Grid item md={8} sm={10} xs={12}>
+            <h4 className={classesBase.contentTitle}>Who We Are</h4>
           </Grid>
           {smAndDown && (
             <Grid item sm={10} xs={12} className={clsx(classesBase.mb3, classesBase.textCenter)}>
@@ -71,29 +64,14 @@ export default function Home() {
           )}
           <Grid item md={6} sm={10} xs={12}>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum.
+              At Black Mountains CBD we only use high quality full spectrum cannabis All our cannabis (hemp) is
+              organically grown in Europe allowing us to manufacture a range of products high in CBD but low in THC.
             </p>
             <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
-              rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-              explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-              consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
-              dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
-              incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
-              exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem
-              vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui
-              dolorem eum fugiat quo voluptas nulla pariatur?
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum.
+              All our products are chemical free using only plant material that is hand-picked and carefully graded for
+              quality. Our main hemp supplier is a member of the Cannabis Trades Association as are we. Located in the
+              shadow of the beautiful Black Mountains near Abergavenny we are a small company who are versatile and
+              innovative. This means we can make a CBD oil just for you.
             </p>
           </Grid>
           {!smAndDown && (
@@ -102,87 +80,69 @@ export default function Home() {
             </Grid>
           )}
           <Grid item md={8} sm={10} xs={12} className={clsx(classesBase.mt3, classesBase.mb3)}>
-            <h4 className={clsx(classesBase.mt3, classesBase.mb3, classesBase.contentTitle)}>What I Do</h4>
-            <ExpansionPanel elevation={0} defaultExpanded={true} className={classesBase.mb3}>
-              <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                <p className={classes.expansionSummary}>Products</p>
-              </ExpansionPanelSummary>
-              <ExpansionPanelDetails>
-                <Grid container direction="column" justify="center" alignItems="center">
-                  <Grid item>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-                      in culpa qui officia deserunt mollit anim id est laborum.{" "}
-                      <a href="mailto:cruziana2000@aol.com">cruziana2000@aol.com.</a>
-                    </p>
-                  </Grid>
-                  <Grid item>
-                    <LinkButton className={classes.button} to="/products">
-                      Products
-                    </LinkButton>
-                  </Grid>
+            <h4 className={clsx(classesBase.mt3, classesBase.mb3, classesBase.contentTitle)}>What We Do</h4>
+            <p>
+              We deliver high quality and hand crafted CBD products from rural Wales to anywhere in the world where CBD
+              is legal. Please contact us if you are interested in CBD's promising results for your wellbeing, sleep and
+              more.
+            </p>
+            <Grid container justify="center" spacing={2}>
+              {products.map((product: Product) => (
+                <Grid key={product.name} item md={6} sm={10} xs={12}>
+                  <Card elevation={0} className={classesBase.card}>
+                    <CardMedia
+                      component="img"
+                      alt={`${product.name}-image`}
+                      height="300"
+                      image={product.image}
+                      title={product.name}
+                    />
+
+                    <Grid
+                      container
+                      direction="column"
+                      justify="space-between"
+                      className={clsx(classesBase.cardPadding, classesBase.fillHeight)}
+                    >
+                      <h6 className={clsx(classesBase.primaryText, classesBase.textCenter)}>{product.name}</h6>
+                      <p>{product.info}</p>
+                      <Grid container justify="space-between">
+                        <p>{product.price}</p>
+                        <Button color="primary" onClick={() => (window.location.href = "mailto:cruziana2000@aol.com")}>
+                          Contact
+                        </Button>
+                      </Grid>
+                    </Grid>
+                  </Card>
                 </Grid>
-              </ExpansionPanelDetails>
-            </ExpansionPanel>
-            <ExpansionPanel elevation={0} className={classesBase.mb3}>
-              <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                <p className={classes.expansionSummary}>Videos</p>
-              </ExpansionPanelSummary>
-              <ExpansionPanelDetails>
-                <Grid container direction="column" justify="center" alignItems="center">
-                  <Grid item>
-                    <p>
-                      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                      totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                      dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-                      sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
-                      quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
-                      numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim
-                      ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid
-                      ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
-                      quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?{" "}
-                      <a href="mailto:cruziana2000@aol.com">cruziana2000@aol.com.</a>
-                    </p>
-                  </Grid>
-                  <Grid item>
-                    <LinkButton className={classes.button} to="/videos">
-                      Videos
-                    </LinkButton>
-                  </Grid>
-                </Grid>
-              </ExpansionPanelDetails>
-            </ExpansionPanel>
+              ))}
+            </Grid>
           </Grid>
           <Grid item sm={10} xs={12}>
-            <Divider className={classes.divider} />
+            <Divider className={classesBase.divider} />
           </Grid>
           <Grid item md={4} sm={10} xs={12} className={clsx(classesBase.mt3, classesBase.mb3, classesBase.textCenter)}>
-            <Avatar src={avatar} alt="" className={classes.avatar} />
+            <Avatar src={avatar} alt="" className={classesBase.avatar} />
             <h6>Kim Kemp</h6>
             <h6>Give me money</h6>
           </Grid>
           <Grid item md={4} sm={10} xs={12}>
-            <Grid container justify="center" alignItems="center" className={classes.fillHeight}>
+            <Grid container justify="center" alignItems="center" className={classesBase.fillHeight}>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
+                Kim is great. Kim is great. Kim is great. Kim is great. Kim is great. Kim is great. Kim is great. Kim is
+                great. Kim is great. Kim is great. Kim is great. Kim is great. Kim is great. Kim is great. Kim is great.
+                Kim is great.
               </p>
             </Grid>
           </Grid>
           <Grid item md={4} sm={10} xs={12} className={classesBase.mb3}>
-            <Grid container justify="center" alignItems="center" className={classes.fillHeight}>
+            <Grid container justify="center" alignItems="center" className={classesBase.fillHeight}>
               <List>
                 <ListItem>
                   <ListItemIcon>
                     <LocationOnIcon color="primary" fontSize="large" />
                   </ListItemIcon>
-                  <ListItemText primary="Location" secondary="Llanover, Wales" />
+                  <ListItemText primary="Location" secondary="Abergavenny, Wales" />
                 </ListItem>
                 <ListItem>
                   <ListItemIcon>
