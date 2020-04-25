@@ -53,7 +53,7 @@ export default function Home() {
           <span className={classesBase.headerText}>Black Mountains CBD</span>
         </Grid>
         <Grid container justify="center" className={classesBase.contentContainer}>
-          <Grid item md={8} sm={10} xs={12}>
+          <Grid item md={8} sm={10} xs={12} className={classesBase.mb2}>
             <h4 className={classesBase.contentTitle}>Who We Are</h4>
           </Grid>
           {smAndDown && (
