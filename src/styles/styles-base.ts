@@ -1,4 +1,4 @@
-import { createStyles, Theme, makeStyles, fade } from "@material-ui/core/styles";
+import { createStyles, Theme, makeStyles } from "@material-ui/core/styles";
 
 const useStylesBase = makeStyles((theme: Theme) =>
   createStyles({
@@ -7,7 +7,7 @@ const useStylesBase = makeStyles((theme: Theme) =>
       display: "flex",
       "& a": {
         color: theme.palette.primary.main,
-        textDecoration: "unset",
+        textDecoration: "unset"
       },
       "& p": {
         fontSize: "1rem",
@@ -34,46 +34,19 @@ const useStylesBase = makeStyles((theme: Theme) =>
         backgroundColor: "unset !important"
       }
     },
+    content: {
+      flexGrow: 1
+    },
     primaryText: {
       color: theme.palette.primary.main
     },
-    dialog: {
-      "& .MuiPaper-elevation24": {
-        boxShadow: "none !important"
-      }
-    },
-    searchTextField: {
-      "& .MuiFilledInput-root": {
-        backgroundColor: theme.palette.background.paper
-      },
-      "& .MuiFilledInput-root:hover": {
-        backgroundColor: fade(theme.palette.background.paper, 0.9)
-      }
-    },
-    paper: {
-      padding: theme.spacing(3),
-      marginBottom: theme.spacing(4)
-    },
-    viewPaper: {
-      marginTop: theme.spacing(3),
-      padding: theme.spacing(3)
+    card: {
+      display: "flex",
+      flexDirection: "column",
+      height: "100%"
     },
     textCenter: {
       textAlign: "center"
-    },
-    textField: {
-      marginBottom: `${theme.spacing(4)}px !important`,
-      "& .MuiFilledInput-root": {
-        borderRadius: "4px !important"
-      },
-      "& .MuiFilledInput-underline:before ": {
-        borderBottom: "none !important"
-      },
-      "& .MuiFilledInput-underline:after": {
-        marginRight: "2px !important",
-        marginLeft: "2px !important",
-        borderRadius: "4px !important"
-      }
     },
     mt3: {
       marginTop: theme.spacing(3)
@@ -96,39 +69,8 @@ const useStylesBase = makeStyles((theme: Theme) =>
     fullHeight: {
       height: "100vh"
     },
-    recLogo: {
-      display: "flex",
-      height: 100,
-      margin: "auto"
-    },
-    shortContentDom: {
-      maxHeight: 600,
-      overflowY: "hidden",
-      textOverflow: "ellipsis"
-    },
-    contentDom: {
-      wordBreak: "break-word",
-      "& img": {
-        display: "flex",
-        margin: "auto",
-        height: "unset",
-        width: "unset",
-        maxWidth: "100%"
-      }
-    },
     boldText: {
       fontWeight: 700
-    },
-    button: {
-      margin: theme.spacing(1)
-    },
-    divider: {
-      marginLeft: theme.spacing(2),
-      marginRight: theme.spacing(2)
-    },
-    grid: {
-      paddingLeft: theme.spacing(2),
-      paddingRight: theme.spacing(2)
     },
     contentContainer: {
       padding: theme.spacing(7),
@@ -162,16 +104,13 @@ const useStylesBase = makeStyles((theme: Theme) =>
       }
     },
     homeLogo: {
-      maxHeight: 220,
-      [theme.breakpoints.down("md")]: {
-        maxHeight: 180
-      },
-      [theme.breakpoints.down("sm")]: {
-        maxHeight: 120
-      }
+      width: "100%",
+      objectFit: "cover",
+      maxHeight: 280
     },
     contentTitle: {
       fontSize: "2.125rem",
+      color: theme.palette.primary.main,
       fontWeight: 700,
       lineHeight: 1.17,
       letterSpacing: "0.00735em",
@@ -183,6 +122,25 @@ const useStylesBase = makeStyles((theme: Theme) =>
         letterSpacing: 0,
         textAlign: "center"
       }
+    },
+    avatar: {
+      height: 200,
+      width: 200,
+      margin: "auto",
+      marginBottom: theme.spacing(4)
+    },
+    divider: {
+      margin: theme.spacing(4)
+    },
+    expansionSummary: {
+      fontWeight: 700,
+      margin: 0
+    },
+    fillHeight: {
+      height: "100%"
+    },
+    cardPadding: {
+      padding: theme.spacing(2)
     }
   })
 );

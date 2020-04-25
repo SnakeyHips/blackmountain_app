@@ -4,18 +4,12 @@ import { createBrowserHistory } from "history";
 import { ThemeProvider } from "@material-ui/styles";
 import { CssBaseline } from "@material-ui/core";
 import HelmetWrapper from "./Layout/HelmetWrapper";
-import Navigation from "./Layout/Navigation";
+import Main from "./Layout/Main";
 import Home from "./Pages/Home";
-import Products from "./Pages/Products";
 import Theme from "../styles/theme";
 import "./App.css";
 
 const history = createBrowserHistory();
-
-// Scroll to top on route change
-history.listen(_ => {
-  window.scrollTo(0, 0);
-});
 
 export default function App() {
   const title: string = "Black Mountains CBD";
@@ -25,7 +19,7 @@ export default function App() {
       <CssBaseline />
       <HelmetWrapper title={title} description={`${title}`}>
         <Router history={history}>
-          <Navigation>
+          <Main>
             <Switch>
               <Route
                 path="/"
@@ -38,19 +32,8 @@ export default function App() {
                   );
                 }}
               />
-              <Route
-                path="/products"
-                exact
-                render={() => {
-                  return (
-                    <HelmetWrapper title={`${title} - Products`} description={`Products by ${title}`}>
-                      <Products />
-                    </HelmetWrapper>
-                  );
-                }}
-              />
             </Switch>
-          </Navigation>
+          </Main>
         </Router>
       </HelmetWrapper>
     </ThemeProvider>
