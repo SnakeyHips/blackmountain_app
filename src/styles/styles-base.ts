@@ -127,7 +127,8 @@ const useStylesBase = makeStyles((theme: Theme) =>
       height: 200,
       width: 200,
       margin: "auto",
-      marginBottom: theme.spacing(4)
+      marginBottom: theme.spacing(4),
+      borderRadius: "50%"
     },
     divider: {
       margin: theme.spacing(4)
