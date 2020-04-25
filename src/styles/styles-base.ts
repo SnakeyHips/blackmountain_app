@@ -99,8 +99,7 @@ const useStylesBase = makeStyles((theme: Theme) =>
       [theme.breakpoints.down("md")]: {
         padding: theme.spacing(2),
         fontSize: "1.75rem",
-        lineHeight: "2.5rem",
-        marginBottom: theme.spacing(7)
+        lineHeight: "2.5rem"
       }
     },
     homeLogo: {
