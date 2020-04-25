@@ -27,12 +27,12 @@ export default function Products() {
       <Grid container direction="column" justify="center">
         <Grid item xs={12}>
           <img src={productsImage} className={classesBase.headerImage} alt="" />
-          <span className={classesBase.headerText}>Images</span>
+          <span className={classesBase.headerText}>Products</span>
         </Grid>
         <Grid container justify="center" className={classesBase.contentContainer}>
           <Grid item md={8} sm={10} xs={12} className={classesBase.mb3}>
-            <h4 className={clsx(classesBase.contentTitle, classesBase.mb3)}>Dan's Rockin' Images</h4>
-            <p>Here are some kick ass images I've made. Enjoy!</p>
+            <h4 className={clsx(classesBase.contentTitle, classesBase.mb3)}>Black Mountains CBD Products</h4>
+            <p>Here are some kick ass products I've made. Enjoy!</p>
           </Grid>
           <Grid item md={8} sm={10} xs={12} className={classesBase.mb3}>
             {renderProducts()}

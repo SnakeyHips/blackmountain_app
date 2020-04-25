@@ -61,7 +61,7 @@ export default function TopAppBar() {
       <Toolbar>
         <Grid container alignItems="center">
           <Grid item xs>
-            <h6 className={classesBase.primaryText}>Dan Gough</h6>
+            <h6 className={classesBase.primaryText}>Black Mountains CBD</h6>
           </Grid>
           <Grid item xs>
             <Grid container justify="flex-end">
@@ -93,7 +93,7 @@ export default function TopAppBar() {
         <Grid container alignItems="center">
           <Grid item xs>
             <Grid container alignItems="center">
-              <h6 className={classesBase.primaryText}>Dan Gough</h6>
+              <h6 className={classesBase.primaryText}>Black Mountains CBD</h6>
             </Grid>
           </Grid>
           <Grid item xs>
@@ -101,11 +101,8 @@ export default function TopAppBar() {
               <LinkButton className={classesBase.button} to="/">
                 Home
               </LinkButton>
-              <LinkButton className={classesBase.button} to="/images">
-                Images
-              </LinkButton>
-              <LinkButton className={classesBase.button} to="/videos">
-                Videos
+              <LinkButton className={classesBase.button} to="/products">
+                Products
               </LinkButton>
             </Grid>
           </Grid>

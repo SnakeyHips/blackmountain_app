@@ -58,7 +58,7 @@ export default function Home() {
       <Grid container direction="column" justify="center">
         <Grid item xs={12}>
           <img src={homeImage} className={classesBase.headerImage} alt="" />
-          <span className={classesBase.headerText}>Dan Gough</span>
+          <span className={classesBase.headerText}>Black Mountains CBD</span>
         </Grid>
         <Grid container justify="center" className={classesBase.contentContainer}>
           <Grid item md={8} sm={10} xs={12} className={classesBase.mb3}>
@@ -105,7 +105,7 @@ export default function Home() {
             <h4 className={clsx(classesBase.mt3, classesBase.mb3, classesBase.contentTitle)}>What I Do</h4>
             <ExpansionPanel elevation={0} defaultExpanded={true} className={classesBase.mb3}>
               <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                <p className={classes.expansionSummary}>Images</p>
+                <p className={classes.expansionSummary}>Products</p>
               </ExpansionPanelSummary>
               <ExpansionPanelDetails>
                 <Grid container direction="column" justify="center" alignItems="center">
@@ -120,8 +120,8 @@ export default function Home() {
                     </p>
                   </Grid>
                   <Grid item>
-                    <LinkButton className={classes.button} to="/images">
-                      Images
+                    <LinkButton className={classes.button} to="/products">
+                      Products
                     </LinkButton>
                   </Grid>
                 </Grid>
@@ -161,7 +161,7 @@ export default function Home() {
           </Grid>
           <Grid item md={4} sm={10} xs={12} className={clsx(classesBase.mt3, classesBase.mb3, classesBase.textCenter)}>
             <Avatar src={avatar} alt="" className={classes.avatar} />
-            <h6>DAN GOUGH</h6>
+            <h6>Kim Kemp</h6>
             <h6>Give me money</h6>
           </Grid>
           <Grid item md={4} sm={10} xs={12}>
