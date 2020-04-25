@@ -131,7 +131,7 @@ const useStylesBase = makeStyles((theme: Theme) =>
       borderRadius: "50%"
     },
     divider: {
-      margin: theme.spacing(4)
+      margin: `${theme.spacing(4)}px !important`
     },
     expansionSummary: {
       fontWeight: 700,

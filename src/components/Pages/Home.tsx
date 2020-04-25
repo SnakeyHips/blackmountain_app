@@ -96,7 +96,6 @@ export default function Home() {
                       image={product.image}
                       title={product.name}
                     />
-
                     <Grid
                       container
                       direction="column"
