@@ -6,7 +6,6 @@ import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Divider from "@material-ui/core/Divider";
-import Avatar from "@material-ui/core/Avatar";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
@@ -122,7 +121,7 @@ export default function Home() {
             <Divider className={classesBase.divider} />
           </Grid>
           <Grid item md={4} sm={10} xs={12} className={clsx(classesBase.mt3, classesBase.mb3, classesBase.textCenter)}>
-            <Avatar src={avatar} alt="" className={classesBase.avatar} />
+            <img src={avatar} alt="kim" className={classesBase.avatar} />
             <h6>Kim Kemp</h6>
             <h6>Give me money</h6>
           </Grid>
