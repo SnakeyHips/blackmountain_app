@@ -34,6 +34,9 @@ const useStylesBase = makeStyles((theme: Theme) =>
         backgroundColor: "unset !important"
       }
     },
+    content: {
+      flexGrow: 1
+    },
     primaryText: {
       color: theme.palette.primary.main
     },
@@ -91,11 +94,11 @@ const useStylesBase = makeStyles((theme: Theme) =>
       fontWeight: 700,
       lineHeight: "3.5rem",
       letterSpacing: "0.00938em",
+      textAlign: "right",
       [theme.breakpoints.down("md")]: {
         padding: theme.spacing(2),
         fontSize: "1.75rem",
-        lineHeight: "2.5rem",
-        marginBottom: theme.spacing(7)
+        lineHeight: "2.5rem"
       }
     },
     homeLogo: {
@@ -120,6 +123,24 @@ const useStylesBase = makeStyles((theme: Theme) =>
     },
     fillHeight: {
       height: "100%"
+    },
+    avatar: {
+      height: 200,
+      width: 200,
+      margin: "auto",
+      marginBottom: theme.spacing(4),
+      borderRadius: "50%"
+    },
+    divider: {
+      margin: `${theme.spacing(4)}px !important`
+    },
+    card: {
+      display: "flex",
+      flexDirection: "column",
+      height: "100%"
+    },
+    cardPadding: {
+      padding: theme.spacing(2)
     }
   })
 );
