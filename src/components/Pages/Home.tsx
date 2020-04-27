@@ -88,14 +88,18 @@ export default function Home() {
           <Grid item md={4} sm={10} xs={12} className={clsx(classesBase.mt3, classesBase.mb3, classesBase.textCenter)}>
             <img src={avatar} alt="kim" className={classes.avatar} />
             <h6>Kim Kemp</h6>
-            <h6>Give me money</h6>
+            <h6>Owner</h6>
           </Grid>
           <Grid item md={4} sm={10} xs={12}>
             <Grid container justify="center" alignItems="center" className={classesBase.fillHeight}>
               <p>
-                Kim is great. Kim is great. Kim is great. Kim is great. Kim is great. Kim is great. Kim is great. Kim is
-                great. Kim is great. Kim is great. Kim is great. Kim is great. Kim is great. Kim is great. Kim is great.
-                Kim is great.
+                My introduction to the world of CBD was initiated by a terminal diagnosis of an incurable head cancer.
+                Whilst under palliative care, my wife purchased some CBD online. With nothing to lose I began taking it
+                and within three months my quality of life improved. Initially I was very sceptical, nevertheless I
+                began to research and study the history and medicinal properties of this ancient herb. My findings
+                inspired me to learn how to manufacture and produce my own CBD. Through continued study and practice I
+                have developed a quality product that can offer the most efficacious properties, from the CBD compounds
+                that originate within the cannabis plant.
               </p>
             </Grid>
           </Grid>
