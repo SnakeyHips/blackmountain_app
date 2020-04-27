@@ -4,10 +4,10 @@ import { grey, green } from "@material-ui/core/colors";
 const theme: Theme = createMuiTheme({
   palette: {
     primary: {
-      main: green[500]
+      main: green.A700
     },
     secondary: {
-      main: fade(green[500], 0.1)
+      main: fade(green.A700, 0.1)
     },
     background: {
       default: "#2E3032",
