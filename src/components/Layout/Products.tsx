@@ -86,7 +86,7 @@ export default function Products() {
   const products: Product[] = [cbd, fushion, serenity, salvation, lip, synergy, sanitiser, tea];
 
   return (
-    <Grid container justify="center" spacing={2}>
+    <Grid container justify="center" spacing={4}>
       {products.map((product: Product) => (
         <Grid key={product.name} item md={6} sm={10} xs={12}>
           <Card elevation={0} className={classesBase.card}>
