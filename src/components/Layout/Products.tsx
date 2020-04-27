@@ -6,7 +6,7 @@ import Button from "@material-ui/core/Button";
 import Spacer from "./Spacer";
 import Product from "../../models/product";
 import cbdImage from "../../assets/cbd.jpg";
-import fushionImage from "../../assets/fushion.jpg";
+import fusionImage from "../../assets/fusion.jpg";
 import serenityImage from "../../assets/serenity.jpg";
 import synergyImage from "../../assets/synergy.jpg";
 import lipImage from "../../assets/lip.jpg";
@@ -27,11 +27,11 @@ export default function Products() {
     price: "£25 (5%) \n £46 (10%) \n £59 (15%) \n £74 (20%)"
   };
 
-  const fushion: Product = {
-    name: "Fushion Oil",
-    image: fushionImage,
+  const fusion: Product = {
+    name: "Fusion Oil",
+    image: fusionImage,
     info:
-      "A natural trans dermal cream which is applied to the skin. You can experience health benefits such as pain relief, inflammation relief, rheumatism pain and more.",
+      "Water soluble version of CBD at 2%. This means it can be added to tea, coffee, beer and other drinks as a convenient means of adding to your favourite beverage when required.",
     price: "£9"
   };
 
@@ -83,7 +83,7 @@ export default function Products() {
     price: "£9"
   };
 
-  const products: Product[] = [cbd, fushion, serenity, salvation, lip, synergy, sanitiser, tea];
+  const products: Product[] = [cbd, fusion, serenity, salvation, lip, synergy, sanitiser, tea];
 
   return (
     <Grid container justify="center" spacing={4}>
@@ -100,11 +100,11 @@ export default function Products() {
             <Grid container direction="column" className={clsx(classesBase.cardPadding, classesBase.fillHeight)}>
               <h6 className={clsx(classesBase.primaryText, classesBase.textCenter)}>{product.name}</h6>
               <p>{product.info}</p>
+              <Spacer />
               <Grid container justify="space-between">
                 <p>Price: </p>
                 <p className={classesBase.textRight}>{product.price}</p>
               </Grid>
-              <Spacer />
               <Grid container justify="center">
                 <Button
                   color="primary"
