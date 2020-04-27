@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
+import { Theme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Grid from "@material-ui/core/Grid";
 import Divider from "@material-ui/core/Divider";
@@ -10,30 +10,14 @@ import ListItemText from "@material-ui/core/ListItemText";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import EmailIcon from "@material-ui/icons/Email";
 import PhoneIcon from "@material-ui/icons/Phone";
-import LinkButton from "../Layout/LinkButton";
+import Products from "../Layout/Products";
 import homeImage from "../../assets/home.jpg";
 import mainImage from "../../assets/main.jpg";
 import avatar from "../../assets/kim.jpg";
 import useStylesBase from "../../styles/styles-base";
 import clsx from "clsx";
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    avatar: {
-      height: 200,
-      width: 200,
-      margin: "auto",
-      marginBottom: theme.spacing(4),
-      borderRadius: "50%"
-    },
-    divider: {
-      margin: `${theme.spacing(4)}px !important`
-    }
-  })
-);
-
 export default function Home() {
-  const classes = useStyles();
   const classesBase = useStylesBase();
   const smAndDown = useMediaQuery((theme: Theme) => theme.breakpoints.down("sm"));
   const aboutImg = <img className={classesBase.homeLogo} src={mainImage} alt="main" />;
@@ -78,15 +62,13 @@ export default function Home() {
               is legal. Please contact us if you are interested in CBD's promising results for your wellbeing, sleep and
               more.
             </p>
-            <Grid container justify="center">
-              <LinkButton to="/products">Products</LinkButton>
-            </Grid>
+            <Products />
           </Grid>
           <Grid item sm={10} xs={12}>
-            <Divider className={classes.divider} />
+            <Divider className={classesBase.divider} />
           </Grid>
           <Grid item md={4} sm={10} xs={12} className={clsx(classesBase.mt3, classesBase.mb3, classesBase.textCenter)}>
-            <img src={avatar} alt="kim" className={classes.avatar} />
+            <img src={avatar} alt="kim" className={classesBase.avatar} />
             <h6>Kim Kemp</h6>
             <h6>Owner</h6>
           </Grid>
