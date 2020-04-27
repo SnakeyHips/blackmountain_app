@@ -34,9 +34,6 @@ const useStylesBase = makeStyles((theme: Theme) =>
         backgroundColor: "unset !important"
       }
     },
-    content: {
-      flexGrow: 1
-    },
     primaryText: {
       color: theme.palette.primary.main
     },
@@ -47,6 +44,9 @@ const useStylesBase = makeStyles((theme: Theme) =>
     },
     textCenter: {
       textAlign: "center"
+    },
+    button: {
+      margin: theme.spacing(1)
     },
     mt3: {
       marginTop: theme.spacing(3)
@@ -99,7 +99,8 @@ const useStylesBase = makeStyles((theme: Theme) =>
       [theme.breakpoints.down("md")]: {
         padding: theme.spacing(2),
         fontSize: "1.75rem",
-        lineHeight: "2.5rem"
+        lineHeight: "2.5rem",
+        marginBottom: theme.spacing(7)
       }
     },
     homeLogo: {
