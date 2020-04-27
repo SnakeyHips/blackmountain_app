@@ -34,19 +34,14 @@ const useStylesBase = makeStyles((theme: Theme) =>
         backgroundColor: "unset !important"
       }
     },
-    content: {
-      flexGrow: 1
-    },
     primaryText: {
       color: theme.palette.primary.main
     },
-    card: {
-      display: "flex",
-      flexDirection: "column",
-      height: "100%"
-    },
     textCenter: {
       textAlign: "center"
+    },
+    button: {
+      margin: theme.spacing(1)
     },
     mt3: {
       marginTop: theme.spacing(3)
@@ -99,7 +94,8 @@ const useStylesBase = makeStyles((theme: Theme) =>
       [theme.breakpoints.down("md")]: {
         padding: theme.spacing(2),
         fontSize: "1.75rem",
-        lineHeight: "2.5rem"
+        lineHeight: "2.5rem",
+        marginBottom: theme.spacing(7)
       }
     },
     homeLogo: {
@@ -122,25 +118,8 @@ const useStylesBase = makeStyles((theme: Theme) =>
         textAlign: "center"
       }
     },
-    avatar: {
-      height: 200,
-      width: 200,
-      margin: "auto",
-      marginBottom: theme.spacing(4),
-      borderRadius: "50%"
-    },
-    divider: {
-      margin: `${theme.spacing(4)}px !important`
-    },
-    expansionSummary: {
-      fontWeight: 700,
-      margin: 0
-    },
     fillHeight: {
       height: "100%"
-    },
-    cardPadding: {
-      padding: theme.spacing(2)
     }
   })
 );

@@ -1,10 +1,7 @@
 import React from "react";
-import { Theme } from "@material-ui/core/styles";
+import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Grid from "@material-ui/core/Grid";
-import Card from "@material-ui/core/Card";
-import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
 import Divider from "@material-ui/core/Divider";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
@@ -13,37 +10,33 @@ import ListItemText from "@material-ui/core/ListItemText";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import EmailIcon from "@material-ui/icons/Email";
 import PhoneIcon from "@material-ui/icons/Phone";
-import { Product } from "../../models/product";
+import LinkButton from "../Layout/LinkButton";
 import homeImage from "../../assets/home.jpg";
 import mainImage from "../../assets/main.jpg";
 import avatar from "../../assets/kim.jpg";
-import cbdImage from "../../assets/cbd.jpg";
-import balmImage from "../../assets/balm.jpg";
 import useStylesBase from "../../styles/styles-base";
 import clsx from "clsx";
 
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    avatar: {
+      height: 200,
+      width: 200,
+      margin: "auto",
+      marginBottom: theme.spacing(4),
+      borderRadius: "50%"
+    },
+    divider: {
+      margin: `${theme.spacing(4)}px !important`
+    }
+  })
+);
+
 export default function Home() {
+  const classes = useStyles();
   const classesBase = useStylesBase();
   const smAndDown = useMediaQuery((theme: Theme) => theme.breakpoints.down("sm"));
   const aboutImg = <img className={classesBase.homeLogo} src={mainImage} alt="main" />;
-
-  const cbd: Product = {
-    name: "CBD OIL",
-    image: cbdImage,
-    info:
-      "Cannabidiol is a popular natural remedy used for many common ailments.  Better known as CBD, it is one of over 100 chemical compounds known as cannabinoids found in the cannabis or marijuana plant, Cannabis sativa.",
-    price: "£20"
-  };
-
-  const balm: Product = {
-    name: "SERENITY",
-    image: balmImage,
-    info:
-      "A natural trans dermal cream which is applied to the skin. You can experience health benefits such as pain relief, inflammation relief, rheumatism pain and more.",
-    price: "£40"
-  };
-
-  const products: Product[] = [cbd, balm];
 
   return (
     <div>
@@ -85,51 +78,28 @@ export default function Home() {
               is legal. Please contact us if you are interested in CBD's promising results for your wellbeing, sleep and
               more.
             </p>
-            <Grid container justify="center" spacing={2}>
-              {products.map((product: Product) => (
-                <Grid key={product.name} item md={6} sm={10} xs={12}>
-                  <Card elevation={0} className={classesBase.card}>
-                    <CardMedia
-                      component="img"
-                      alt={`${product.name}-image`}
-                      height="300"
-                      image={product.image}
-                      title={product.name}
-                    />
-                    <Grid
-                      container
-                      direction="column"
-                      justify="space-between"
-                      className={clsx(classesBase.cardPadding, classesBase.fillHeight)}
-                    >
-                      <h6 className={clsx(classesBase.primaryText, classesBase.textCenter)}>{product.name}</h6>
-                      <p>{product.info}</p>
-                      <Grid container justify="space-between">
-                        <p>{product.price}</p>
-                        <Button color="primary" onClick={() => (window.location.href = "mailto:cruziana2000@aol.com")}>
-                          Contact
-                        </Button>
-                      </Grid>
-                    </Grid>
-                  </Card>
-                </Grid>
-              ))}
+            <Grid container justify="center">
+              <LinkButton to="/products">Products</LinkButton>
             </Grid>
           </Grid>
           <Grid item sm={10} xs={12}>
-            <Divider className={classesBase.divider} />
+            <Divider className={classes.divider} />
           </Grid>
           <Grid item md={4} sm={10} xs={12} className={clsx(classesBase.mt3, classesBase.mb3, classesBase.textCenter)}>
-            <img src={avatar} alt="kim" className={classesBase.avatar} />
+            <img src={avatar} alt="kim" className={classes.avatar} />
             <h6>Kim Kemp</h6>
-            <h6>Give me money</h6>
+            <h6>Owner</h6>
           </Grid>
           <Grid item md={4} sm={10} xs={12}>
             <Grid container justify="center" alignItems="center" className={classesBase.fillHeight}>
               <p>
-                Kim is great. Kim is great. Kim is great. Kim is great. Kim is great. Kim is great. Kim is great. Kim is
-                great. Kim is great. Kim is great. Kim is great. Kim is great. Kim is great. Kim is great. Kim is great.
-                Kim is great.
+                My introduction to the world of CBD was initiated by a terminal diagnosis of an incurable head cancer.
+                Whilst under palliative care, my wife purchased some CBD online. With nothing to lose I began taking it
+                and within three months my quality of life improved. Initially I was very sceptical, nevertheless I
+                began to research and study the history and medicinal properties of this ancient herb. My findings
+                inspired me to learn how to manufacture and produce my own CBD. Through continued study and practice I
+                have developed a quality product that can offer the most efficacious properties, from the CBD compounds
+                that originate within the cannabis plant.
               </p>
             </Grid>
           </Grid>
