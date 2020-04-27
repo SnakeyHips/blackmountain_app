@@ -37,11 +37,6 @@ const useStylesBase = makeStyles((theme: Theme) =>
     primaryText: {
       color: theme.palette.primary.main
     },
-    card: {
-      display: "flex",
-      flexDirection: "column",
-      height: "100%"
-    },
     textCenter: {
       textAlign: "center"
     },
@@ -123,25 +118,8 @@ const useStylesBase = makeStyles((theme: Theme) =>
         textAlign: "center"
       }
     },
-    avatar: {
-      height: 200,
-      width: 200,
-      margin: "auto",
-      marginBottom: theme.spacing(4),
-      borderRadius: "50%"
-    },
-    divider: {
-      margin: `${theme.spacing(4)}px !important`
-    },
-    expansionSummary: {
-      fontWeight: 700,
-      margin: 0
-    },
     fillHeight: {
       height: "100%"
-    },
-    cardPadding: {
-      padding: theme.spacing(2)
     }
   })
 );
