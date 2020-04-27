@@ -12,7 +12,8 @@ const useStylesBase = makeStyles((theme: Theme) =>
       "& p": {
         fontSize: "1rem",
         lineHeight: 1.5,
-        letterSpacing: "0.00938em"
+        letterSpacing: "0.00938em",
+        whiteSpace: "pre-line"
       },
       "& li": {
         fontSize: "1rem",
@@ -42,6 +43,9 @@ const useStylesBase = makeStyles((theme: Theme) =>
     },
     textCenter: {
       textAlign: "center"
+    },
+    textRight: {
+      textAlign: "right"
     },
     button: {
       margin: theme.spacing(1)
@@ -128,7 +132,6 @@ const useStylesBase = makeStyles((theme: Theme) =>
       height: 200,
       width: 200,
       margin: "auto",
-      marginBottom: theme.spacing(4),
       borderRadius: "50%"
     },
     divider: {
@@ -141,6 +144,11 @@ const useStylesBase = makeStyles((theme: Theme) =>
     },
     cardPadding: {
       padding: theme.spacing(2)
+    },
+    ctaLogo: {
+      display: "flex",
+      height: 100,
+      margin: "auto"
     }
   })
 );

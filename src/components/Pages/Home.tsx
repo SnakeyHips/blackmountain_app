@@ -14,6 +14,7 @@ import Products from "../Layout/Products";
 import homeImage from "../../assets/home.jpg";
 import mainImage from "../../assets/main.jpg";
 import avatar from "../../assets/kim.jpg";
+import ctaImage from "../../assets/cta.jpg";
 import useStylesBase from "../../styles/styles-base";
 import clsx from "clsx";
 
@@ -58,10 +59,20 @@ export default function Home() {
           <Grid item md={8} sm={10} xs={12} className={clsx(classesBase.mt3, classesBase.mb3)}>
             <h4 className={clsx(classesBase.mt3, classesBase.mb3, classesBase.contentTitle)}>What We Do</h4>
             <p>
+              CBD is one of the most remarkable natural substances on the planet. It is extracted from decarboxylated
+              hemp using an organic solvent which dissolves the CBD and some of the other cannabinoids The mixture is
+              then distilled, the solvent is then collected and used again and the CBD left as a dark sticky residue,
+              The CBD is then emulsified with a carrier oil such as hemp oil, coconut oil or olive oil. It has recently
+              been classed as a medicine by the MHRA. The very low levels of THC means it is not possible to get a high
+              from our CBD. Using another two processes when extracting the CBD from the cannabis results in our CBD oil
+              being being enriched in flavonoids and terpenes which help the CBD become more effective and powerful.
+            </p>
+            <p>
               We deliver high quality and hand crafted CBD products from rural Wales to anywhere in the world where CBD
               is legal. Please contact us if you are interested in CBD's promising results for your wellbeing, sleep and
               more.
             </p>
+            <p>Post &amp; packing to mainland UK add £4.60. Orders over £50.00 free P&amp;P.</p>
             <Products />
           </Grid>
           <Grid item sm={10} xs={12}>
@@ -70,7 +81,7 @@ export default function Home() {
           <Grid item md={4} sm={10} xs={12} className={clsx(classesBase.mt3, classesBase.mb3, classesBase.textCenter)}>
             <img src={avatar} alt="kim" className={classesBase.avatar} />
             <h6>Kim Kemp</h6>
-            <h6>Owner</h6>
+            <h6>Senior Partner</h6>
           </Grid>
           <Grid item md={4} sm={10} xs={12}>
             <Grid container justify="center" alignItems="center" className={classesBase.fillHeight}>
@@ -105,6 +116,9 @@ export default function Home() {
                     <PhoneIcon color="primary" fontSize="large" />
                   </ListItemIcon>
                   <ListItemText primary="Telephone" secondary="+447855868314" />
+                </ListItem>
+                <ListItem>
+                  <img src={ctaImage} className={classesBase.ctaLogo} alt="" />
                 </ListItem>
               </List>
             </Grid>
