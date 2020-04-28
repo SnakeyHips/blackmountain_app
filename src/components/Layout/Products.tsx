@@ -39,7 +39,7 @@ export default function Products() {
     name: "Serenity Cream",
     image: serenityImage,
     info:
-      "A natural trans dermal cream which is applied to the skin. You can experience health benefits such as pain relief, inflammation relief, rheumatism pain and more.",
+      "An organic based moisturiser perfumed with essential oils that is light and easily absorbed. You can experience health benefits such as pain relief, inflammation relief, rheumatism pain and more.",
     price: "£19"
   };
 
@@ -47,7 +47,7 @@ export default function Products() {
     name: "Salvation Salve",
     image: salveationImage,
     info:
-      "A natural trans dermal salve which is applied to the skin. You can experience health benefits such as pain relief, inflammation relief, rheumatism pain, eczema relief and more.",
+      "Due to its high oil content, this transdermal salve is ideal to use for massaging onto an affected area and is also beneficial for those with very dry skin. You can experience health benefits such as pain relief, inflammation relief, rheumatism pain, eczema relief and more.",
     price: "£15"
   };
 
@@ -55,7 +55,7 @@ export default function Products() {
     name: "Lip Salve",
     image: lipImage,
     info:
-      "Our lip balm is petroleum free and is a blend of cbd , butters and waxes all selected for their intense moisturising and healing properties.  Flavoured it with organic vanilla  extract and orange oil",
+      "Our lip balm is petroleum free and is a blend of cbd , butters and waxes all selected for their intense moisturising and healing properties. Flavoured with organic vanilla extract and orange oil",
     price: "£15"
   };
 
@@ -71,7 +71,7 @@ export default function Products() {
     name: "Hand Sanitiser",
     image: sanitiserImage,
     info:
-      "There can be little doubt that cleaning your hands is one of the most important steps you can take to avoid passing on bacteria and viruses. Soap and water tend to greatly reduce the amount of germs but an alcohol based sanitiser will kill more. Our CBD infused hand sanitiser contains isopropanal alcohol and quickly kills bacteria and viruses along with allowing the CBD to dissolve through the skin.",
+      "Soap and water can be the most effective way to clean your hands but when this is not possible an alcohol based cleanser is the best alternative. Our hand sanitiser contains isopropyl alcohol which quickly kills bacteria and viruses. We have also added our CBD oil to help moisturise and soften the skin. Limit of one per order.",
     price: "£9"
   };
 
