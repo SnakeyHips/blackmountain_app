@@ -52,7 +52,7 @@ export default function Home() {
             </p>
           </Grid>
           {!smAndDown && (
-            <Grid item md={3} className={classesBase.ml2}>
+            <Grid item md={3}>
               {whoImg}
             </Grid>
           )}

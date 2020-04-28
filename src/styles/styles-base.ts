@@ -50,9 +50,6 @@ const useStylesBase = makeStyles((theme: Theme) =>
     button: {
       margin: theme.spacing(1)
     },
-    ml2: {
-      marginLeft: theme.spacing(2)
-    },
     fullHeight: {
       height: "100vh"
     },
@@ -94,7 +91,10 @@ const useStylesBase = makeStyles((theme: Theme) =>
       width: "100%",
       objectFit: "cover",
       maxHeight: 380,
-      borderRadius: 4
+      borderRadius: 4,
+      [theme.breakpoints.up("md")]: {
+        marginLeft: theme.spacing(2)
+      }
     },
     contentTitle: {
       fontSize: "2.125rem",
