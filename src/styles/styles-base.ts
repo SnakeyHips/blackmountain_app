@@ -50,21 +50,6 @@ const useStylesBase = makeStyles((theme: Theme) =>
     button: {
       margin: theme.spacing(1)
     },
-    mt3: {
-      marginTop: theme.spacing(3)
-    },
-    mt6: {
-      marginTop: theme.spacing(6)
-    },
-    mb2: {
-      marginBottom: theme.spacing(2)
-    },
-    mb3: {
-      marginBottom: theme.spacing(3)
-    },
-    mb6: {
-      marginBottom: theme.spacing(6)
-    },
     ml2: {
       marginLeft: theme.spacing(2)
     },
@@ -105,10 +90,11 @@ const useStylesBase = makeStyles((theme: Theme) =>
         lineHeight: "2.5rem"
       }
     },
-    homeLogo: {
+    whoImage: {
       width: "100%",
       objectFit: "cover",
-      maxHeight: 280
+      maxHeight: 380,
+      borderRadius: 4
     },
     contentTitle: {
       fontSize: "2.125rem",

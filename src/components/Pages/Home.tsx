@@ -12,52 +12,31 @@ import EmailIcon from "@material-ui/icons/Email";
 import PhoneIcon from "@material-ui/icons/Phone";
 import Products from "../Layout/Products";
 import homeImage from "../../assets/home.jpg";
-import mainImage from "../../assets/main.jpg";
+import whoImage from "../../assets/main.jpg";
 import avatar from "../../assets/kim.jpg";
 import ctaImage from "../../assets/cta.jpg";
 import useStylesBase from "../../styles/styles-base";
-import clsx from "clsx";
 
 export default function Home() {
   const classesBase = useStylesBase();
   const smAndDown = useMediaQuery((theme: Theme) => theme.breakpoints.down("sm"));
-  const aboutImg = <img className={classesBase.homeLogo} src={mainImage} alt="main" />;
+  const whoImg = <img className={classesBase.whoImage} src={whoImage} alt="main" />;
 
   return (
     <div>
       <Grid container direction="column" justify="center">
-        <Grid item xs={12}>
-          <img src={homeImage} className={classesBase.headerImage} alt="" />
-          <span className={classesBase.headerText}>Black Mountains CBD</span>
-        </Grid>
+        <img src={homeImage} className={classesBase.headerImage} alt="" />
+        <span className={classesBase.headerText}>Black Mountains CBD</span>
         <Grid container justify="center" className={classesBase.contentContainer}>
-          <Grid item md={8} sm={10} xs={12} className={classesBase.mb2}>
+          <Grid item md={8} sm={10} xs={12}>
             <h4 className={classesBase.contentTitle}>Who We Are</h4>
           </Grid>
           {smAndDown && (
-            <Grid item sm={10} xs={12} className={clsx(classesBase.mb3, classesBase.textCenter)}>
-              {aboutImg}
+            <Grid item sm={10} xs={12} className={classesBase.textCenter}>
+              {whoImg}
             </Grid>
           )}
-          <Grid item md={6} sm={10} xs={12}>
-            <p>
-              At Black Mountains CBD we only use high quality full spectrum cannabis All our cannabis (hemp) is
-              organically grown in Europe allowing us to manufacture a range of products high in CBD but low in THC.
-            </p>
-            <p>
-              All our products are chemical free using only plant material that is hand-picked and carefully graded for
-              quality. Our main hemp supplier is a member of the Cannabis Trades Association as are we. Located in the
-              shadow of the beautiful Black Mountains near Abergavenny we are a small company who are versatile and
-              innovative. This means we can make a CBD oil just for you.
-            </p>
-          </Grid>
-          {!smAndDown && (
-            <Grid item md={2} className={classesBase.ml2}>
-              {aboutImg}
-            </Grid>
-          )}
-          <Grid item md={8} sm={10} xs={12} className={clsx(classesBase.mt3, classesBase.mb3)}>
-            <h4 className={clsx(classesBase.mt3, classesBase.mb3, classesBase.contentTitle)}>What We Do</h4>
+          <Grid item md={5} sm={10} xs={12}>
             <p>
               CBD is one of the most remarkable natural substances on the planet. It is extracted from decarboxylated
               hemp using an organic solvent which dissolves the CBD and some of the other cannabinoids The mixture is
@@ -66,6 +45,24 @@ export default function Home() {
               been classed as a medicine by the MHRA. The very low levels of THC means it is not possible to get a high
               from our CBD. Using another two processes when extracting the CBD from the cannabis results in our CBD oil
               being being enriched in flavonoids and terpenes which help the CBD become more effective and powerful.
+            </p>
+            <p>
+              At Black Mountains CBD we only use high quality full spectrum cannabis All our cannabis (hemp) is
+              organically grown in Europe allowing us to manufacture a range of products high in CBD but low in THC.
+            </p>
+          </Grid>
+          {!smAndDown && (
+            <Grid item md={3} className={classesBase.ml2}>
+              {whoImg}
+            </Grid>
+          )}
+          <Grid item md={8} sm={10} xs={12}>
+            <h4 className={classesBase.contentTitle}>What We Do</h4>
+            <p>
+              All our products are chemical free using only plant material that is hand-picked and carefully graded for
+              quality. Our main hemp supplier is a member of the Cannabis Trades Association as are we. Located in the
+              shadow of the beautiful Black Mountains near Abergavenny we are a small company who are versatile and
+              innovative. This means we can make a CBD oil just for you.
             </p>
             <p>
               We deliver high quality and hand crafted CBD products from rural Wales to anywhere in the world where CBD
@@ -78,7 +75,7 @@ export default function Home() {
           <Grid item sm={10} xs={12}>
             <Divider className={classesBase.divider} />
           </Grid>
-          <Grid item md={4} sm={10} xs={12} className={clsx(classesBase.mt3, classesBase.mb3, classesBase.textCenter)}>
+          <Grid item md={4} sm={10} xs={12} className={classesBase.textCenter}>
             <img src={avatar} alt="kim" className={classesBase.avatar} />
             <h6>Kim Kemp</h6>
             <h6>Senior Partner</h6>
@@ -96,7 +93,7 @@ export default function Home() {
               </p>
             </Grid>
           </Grid>
-          <Grid item md={4} sm={10} xs={12} className={classesBase.mb3}>
+          <Grid item md={4} sm={10} xs={12}>
             <Grid container justify="center" alignItems="center" className={classesBase.fillHeight}>
               <List>
                 <ListItem>
