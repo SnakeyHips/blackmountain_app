@@ -16,7 +16,6 @@ import whoImage from "../../assets/main.jpg";
 import avatar from "../../assets/kim.jpg";
 import ctaImage from "../../assets/cta.jpg";
 import useStylesBase from "../../styles/styles-base";
-import clsx from "clsx";
 
 export default function Home() {
   const classesBase = useStylesBase();
@@ -26,10 +25,8 @@ export default function Home() {
   return (
     <div>
       <Grid container direction="column" justify="center">
-        <Grid item xs={12}>
-          <img src={homeImage} className={classesBase.headerImage} alt="" />
-          <span className={classesBase.headerText}>Black Mountains CBD</span>
-        </Grid>
+        <img src={homeImage} className={classesBase.headerImage} alt="" />
+        <span className={classesBase.headerText}>Black Mountains CBD</span>
         <Grid container justify="center" className={classesBase.contentContainer}>
           <Grid item md={8} sm={10} xs={12}>
             <h4 className={classesBase.contentTitle}>Who We Are</h4>
