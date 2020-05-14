@@ -11,7 +11,6 @@ import serenityImage from "../../assets/serenity.jpg";
 import synergyImage from "../../assets/synergy.jpg";
 import lipImage from "../../assets/lip.jpg";
 import teaImage from "../../assets/tea.jpg";
-import sanitiserImage from "../../assets/sanitiser.jpg";
 import salveationImage from "../../assets/salveation.jpg";
 import useStylesBase from "../../styles/styles-base";
 import clsx from "clsx";
@@ -67,13 +66,13 @@ export default function Products() {
     price: "£15"
   };
 
-  const sanitiser: Product = {
-    name: "Hand Sanitiser",
-    image: sanitiserImage,
-    info:
-      "Soap and water can be the most effective way to clean your hands but when this is not possible an alcohol based cleanser is the best alternative. Our hand sanitiser contains isopropyl alcohol which quickly kills bacteria and viruses. We have also added our CBD oil to help moisturise and soften the skin. Limit of one per order.",
-    price: "£9"
-  };
+  // const sanitiser: Product = {
+  //   name: "Hand Sanitiser",
+  //   image: sanitiserImage,
+  //   info:
+  //     "Soap and water can be the most effective way to clean your hands but when this is not possible an alcohol based cleanser is the best alternative. Our hand sanitiser contains isopropyl alcohol which quickly kills bacteria and viruses. We have also added our CBD oil to help moisturise and soften the skin. Limit of one per order.",
+  //   price: "£9"
+  // };
 
   const tea: Product = {
     name: "Hemp Tea",
@@ -83,7 +82,7 @@ export default function Products() {
     price: "£9"
   };
 
-  const products: Product[] = [cbd, fusion, serenity, salvation, lip, synergy, sanitiser, tea];
+  const products: Product[] = [cbd, fusion, serenity, salvation, lip, synergy, tea];
 
   return (
     <Grid container justify="center" spacing={4}>
