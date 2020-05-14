@@ -50,6 +50,11 @@ export default function Home() {
               At Black Mountains CBD we only use high quality full spectrum cannabis All our cannabis (hemp) is
               organically grown in Europe allowing us to manufacture a range of products high in CBD but low in THC.
             </p>
+            {/* <Grid container justify="center">
+              <LinkButton className={classesBase.button} to="/reviews">
+                Reviews
+              </LinkButton>
+            </Grid> */}
           </Grid>
           {!smAndDown && (
             <Grid item md={3}>

@@ -6,6 +6,7 @@ import { CssBaseline } from "@material-ui/core";
 import HelmetWrapper from "./Layout/HelmetWrapper";
 import Main from "./Layout/Main";
 import Home from "./Pages/Home";
+// import Reviews from "./Pages/Reviews";
 import Theme from "../styles/theme";
 import "./App.css";
 
@@ -23,6 +24,7 @@ export default function App() {
             <Switch>
               <Route
                 path="/"
+                exact
                 render={() => {
                   return (
                     <HelmetWrapper title={`${title}`} description={`${title}`}>
@@ -31,6 +33,17 @@ export default function App() {
                   );
                 }}
               />
+              {/* <Route
+                path="/reviews"
+                exact
+                render={() => {
+                  return (
+                    <HelmetWrapper title={`${title} - Reviews`} description={`Reviews from ${title}`}>
+                      <Reviews />
+                    </HelmetWrapper>
+                  );
+                }}
+              /> */}
             </Switch>
           </Main>
         </Router>
