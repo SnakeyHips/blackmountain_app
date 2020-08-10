@@ -14,7 +14,6 @@ import Products from "../Layout/Products";
 import homeImage from "../../assets/home.jpg";
 import whoImage from "../../assets/main.jpg";
 import avatar from "../../assets/kim.jpg";
-import ctaImage from "../../assets/cta.jpg";
 import useStylesBase from "../../styles/styles-base";
 
 export default function Home() {
@@ -118,9 +117,6 @@ export default function Home() {
                     <PhoneIcon color="primary" fontSize="large" />
                   </ListItemIcon>
                   <ListItemText primary="Telephone" secondary="+447855868314" />
-                </ListItem>
-                <ListItem>
-                  <img src={ctaImage} className={classesBase.ctaLogo} alt="" />
                 </ListItem>
               </List>
             </Grid>
